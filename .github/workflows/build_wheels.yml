@@ -1,4 +1,4 @@
-name: Build_wheels on macOS-14
+name: Build_wheels on macOS all images
 on: [workflow_dispatch]
 jobs:
   build_wheels:
@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         #os: [ubuntu-latest, windows-latest, macos-13, macos-14]
-        os: [macos-14]
+         os: ['macos-14','macos-13', 'macos-14-large','macos-13-xlarge']
     steps:
       - uses: actions/checkout@v4
       - name: Build wheels
